@@ -17,6 +17,32 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 dofile(vim.g.base46_cache .. "defaults")
+
 vim.opt.rtp:prepend(lazypath)
+
 require "plugins"
+
+require('tabnine').setup({
+  disable_auto_comment = true,
+  accept_keymap = "<A-Enter>",
+  dismiss_keymap = "<C-]>",
+  debounce_ms = 800,
+  suggestion_color = { gui = "#808080", cterm = 244 },
+  exclude_filetypes = { "TelescopePrompt", "NvimTree" },
+  log_file_path = nil,
+})
+
+require("trouble").setup {
+  position = "bottom",
+  height = 15,
+  width = 50,
+  icons = true,
+  mode = "document_diagnostics",
+  severity = nil,
+  fold_open = "",
+  fold_closed = "",
+  group = true,
+  padding = true,
+  cycle_results = true,
+}
 

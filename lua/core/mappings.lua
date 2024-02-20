@@ -6,6 +6,12 @@ M.general = {
   i = {},
 
   n = {
+    -- toggle trouble pane
+    ["<F5>"] = { "<cmd>TroubleToggle<CR>" },
+
+    -- select all
+    ["<C-a>"] = { "gg <S-v> G y" },
+
     -- move the line up
     ["<A-k>"] = { "<cmd>:m-2<CR>" },
 
@@ -283,7 +289,7 @@ M.telescope = {
     -- ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
 
     -- theme switcher
-    -- ["<leader>th"] = { "<cmd> Telescope themes <CR>", "Nvchad themes" },
+    ["<leader>th"] = { "<cmd> Telescope themes <CR>", "Nvchad themes" },
     --
     -- ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
   },
