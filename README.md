@@ -1,3 +1,3 @@
 # NvChad
 
-My NvChad configuration.
+NvChad configuration.
